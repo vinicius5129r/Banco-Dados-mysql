@@ -1,0 +1,52 @@
+-- FUNÇÃO DE CARACTERE
+
+-- CHAR_LEGTH usado para saber a quantidade de caracter que tem a apalavra possui
+select char_length("INSTITUTO FEDERAL") as "CHAR_LENGTH";
+
+-- INSTR localiza posição inicial de partes do texto na string principal
+select instr("INSTITUTO FEDERAL", "FE") as "INSTR";
+
+-- RIGHT / LEFT
+-- PARTES DA STRING PRINCIPAL DEFININDO A QTD DE CARACTERES A 
+-- DIREITA (RIGHT) OU A ESQUERDA(LEFT)
+select right("INSTITUTO FEDERAL", 10) as "RIGHT";
+select left("INSTITUTO FEDERAL", 10) as "LEFT";
+
+-- LPAD / RPAD
+-- PREENCHER COM CARACTER A ESQUERDA(LPAD) OU A DIREITA(RPAD)
+-- MEDIANTE A QUANTIDADE DETERMINADA NO 2º PARÂMETRO
+select lpad("IFRO", 10, "#") as "LPAD";
+select rpad("IFRO", 10, "#") as "RPAD";
+
+-- LTRIM / RTRIM / TRIM
+-- REMOVE ESPAÇO EM BRANCO LTRIM(ESQUERDA), RTRIM(DIREITA)
+-- TRIM (AMBOS)
+select ltrim("   IFRO") as "LTRIM";
+select rtrim("IFRO   ") as "RTRIM";
+select trim("   IFRO   ") as "TRIM";
+
+-- SUBSTR
+-- EXTRAIR PARTES DA STRING A PARTIR DA POSIÇÃO INICIAL CONTANDO 
+-- A QUANTIDADE A SE EXIBIDA APÓS A POSIÇÃO INICIAL DEFINIDA
+select substr("INSTITUTO FEDERAL", 6, 4) as "SUBSTR"; 
+
+-- REVERSE
+-- APRESENTA A STRING DE FORMA REVERSE
+select reverse("JUBILEU") as "REVERSE";
+
+-- REPEAT
+-- REPETE A STRING NA QUANTIDADE DETERMINADA NO 2º PARÂMETRO
+select repeat("CÃO - AUAUAUAUAUAUAUAUAU", 10) as "REPEAT";
+
+-- REPLECE
+select replace("INSTITUTO FEDERAL", "FEDERAL", "FEDERAÇÃO DE RIMORO TEMPTS") as "REPLACE";
+
+-- FORMAT
+-- ARREDONA VALOR E APLICA FORMATAÇÃO 
+select format(1234.567, 2, 'de_DE') as "FORMAT BR";
+
+-- LOWER / UPPER
+-- CONVERTER CARACTER MINÚSCULO PARA MAIÚSCULO - UPPER
+-- CONVERTER CARACTER MAIÚSCULO PARA MINÚSCULO - LOWER
+select upper("instituto federal") as "UPPER";
+select lower("INSTITUTO FEDERAL") as "LOWER";
